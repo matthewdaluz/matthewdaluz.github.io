@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Matthew Daluz | Personal Website</title>
+  <title>Matthew DaLuz | Personal Website</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -172,6 +172,16 @@
       font-size: 15px;
     }
 
+    .card ul {
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    .card li {
+      margin-bottom: 6px;
+    }
+
     h2.section-title {
       margin: 38px 0 12px;
       letter-spacing: -0.01em;
@@ -217,10 +227,11 @@
 <body>
   <header>
     <nav class="nav">
-      <a class="brand" href="#">matthewdaluz.me</a>
+      <a class="brand" href="#">Matthew DaLuz</a>
       <div class="links">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
+        <a href="#redhead">RedHead</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </div>
@@ -230,9 +241,9 @@
   <main class="container">
     <section class="hero">
       <div>
-        <div class="tag">Personal Site</div>
-        <h1>Hi, I'm Matthew Daluz.</h1>
-        <p>I build simple, thoughtful web experiences and enjoy turning ideas into polished, real-world interfaces.</p>
+        <div class="tag">Android engineer • Founder • FOSS advocate</div>
+        <h1>I'm Matthew DaLuz.</h1>
+        <p>I'm an 18-year-old software engineer with 12 years around software (and some hardware) and 6 years in cybersecurity. I build Android apps and tools in C++ and Kotlin, and I lead the non-profit movement <strong>RedHead Industries</strong> to make privacy-first tech for everyone.</p>
         <div class="button-group">
           <a class="btn" href="mailto:hello@matthewdaluz.me">Email me</a>
           <a class="btn secondary" href="#projects">See my work ↓</a>
@@ -244,37 +255,97 @@
       <h2 class="section-title">About</h2>
       <div class="card">
         <p>
-          I'm a developer focused on crafting clean, maintainable code and accessible experiences. I like collaborating across design and engineering to ship projects that feel intentional, from the first pixel to the last line of code.
+          I'm a neurodivergent builder (High-Functional Autism, ADHD, OCD, and Complex Tourettes Syndrome) who channels focus into practical tools that respect privacy, transparency, and community needs. I enjoy working close to the metal on Android, pairing native C++ with Kotlin, and designing experiences that stay offline-first and user-controlled.
+        </p>
+        <p>
+          My work blends open-source values, security-minded thinking, and a people-first lens. Whether it's rooting a device to unlock capability, keeping data local, or publishing FOSS so anyone can verify the code, I'm here to make technology accessible and honest.
         </p>
       </div>
     </section>
 
     <section id="skills">
-      <h2 class="section-title">Skills</h2>
+      <h2 class="section-title">Focus &amp; Skills</h2>
       <ul class="chips">
-        <li>HTML &amp; Semantic Markup</li>
-        <li>CSS &amp; Responsive Design</li>
-        <li>JavaScript</li>
-        <li>Accessibility</li>
-        <li>Performance</li>
-        <li>UI Prototyping</li>
+        <li>Android app &amp; tooling (C++ • Kotlin)</li>
+        <li>Rooted device engineering</li>
+        <li>Cybersecurity mindset (6+ years)</li>
+        <li>Offline-first &amp; privacy-by-default</li>
+        <li>Jetpack Compose UI</li>
+        <li>Open-source leadership &amp; documentation</li>
+        <li>Hardware-aware troubleshooting</li>
       </ul>
     </section>
 
-    <section id="projects">
-      <h2 class="section-title">Recent Projects</h2>
+    <section id="redhead">
+      <h2 class="section-title">RedHead Industries</h2>
+      <div class="card">
+        <p><strong>RedHead Industries</strong> is the independent Canadian organization I founded in 2015 (reborn in 2024) to build FOSS software, games, and open research that defend privacy, transparency, and equality. We're a movement before a corporation — technology for humanity, not surveillance or profit.</p>
+        <p>Two branches drive our work: <strong>RedHead Technologies</strong> ships open software, games, and hardware prototypes, while <strong>RedHead Open-Research</strong> explores new ideas in the open. We're on track to register as a non-profit by February 2026 and we stay alive through community donations (Bitcoin/Monero/Ko-fi). Learn more at <a href="https://redheadindustries.xyz" target="_blank" rel="noreferrer">redheadindustries.xyz</a>.</p>
+      </div>
       <div class="grid">
         <div class="card">
-          <h3>Portfolio Refresh</h3>
-          <p>Designed and built a modern landing page with smooth interactions and thoughtful typography.</p>
+          <h3>Beliefs</h3>
+          <ul>
+            <li>Privacy is a right; code stays transparent.</li>
+            <li>Freedom of speech and open access matter.</li>
+            <li>Community comes before profit.</li>
+          </ul>
         </div>
         <div class="card">
-          <h3>Design System</h3>
-          <p>Created reusable UI patterns to keep multiple products consistent and easy to maintain.</p>
+          <h3>Story</h3>
+          <ul>
+            <li>Started in 2015 publishing books/comics, grew into game dev.</li>
+            <li>2019–2020: built Vib-Ribbon+ (fan-made) and learned openness.</li>
+            <li>2024: rebooted as a FOSS-first movement.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2 class="section-title">Projects</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>APM — Android Package Manager</h3>
+          <p>GPLv3 package manager for rooted Android, mirroring APT with Android-specific tooling.</p>
+          <ul>
+            <li>CLI + root daemon with UNIX-socket IPC; offline-aware operations.</li>
+            <li>Overlay-style module system (AMS) to customize systems safely.</li>
+            <li>Reproducible builds, Termux compatibility, and secure key handling.</li>
+          </ul>
         </div>
         <div class="card">
-          <h3>Dashboard UI</h3>
-          <p>Developed a responsive dashboard experience with clear data visualization and onboarding.</p>
+          <h3>GNUXON — FOSS Bodycam App</h3>
+          <p>Privacy-first Android bodycam for journalists and security-minded users.</p>
+          <ul>
+            <li>CameraX recording with hardware controls (Vol Up start, Vol Down stop).</li>
+            <li>UI auto-hides, wake lock for reliability, and no internet permissions.</li>
+            <li>Stores footage locally at <code>/Movies/GNUXON/</code>.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>SimpleBoot</h3>
+          <p>Root-required Android app that turns a phone into a bootable USB device.</p>
+          <ul>
+            <li>Auto-discovers ISOs, supports ConfigFS, legacy gadget, and loopback modes.</li>
+            <li>Compose UI with logging, CD-ROM boot mode, and per-ISO mount preferences.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>LenovoKeyboardFixer</h3>
+          <p>Linux utility that restores Lenovo laptop keyboards/touchpads after suspend or hibernate.</p>
+          <ul>
+            <li>Rebinds i8042/i2c drivers post-resume across systemd, elogind, or pm-utils.</li>
+            <li>Installs universal hooks and optional kernel quirks for stability.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Fisca</h3>
+          <p>Offline Android app for ODSP recipients to track transactions and income.</p>
+          <ul>
+            <li>Canada/Ontario-specific categories, GST/HST math, and privacy-first storage.</li>
+            <li>No internet permissions; data stays on-device with export options.</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -282,14 +353,14 @@
     <section id="contact">
       <h2 class="section-title">Contact</h2>
       <div class="contact">
-        <p>Want to collaborate or say hello? Reach out anytime.</p>
+        <p>I’m always open to collaborations on privacy-first Android tooling, FOSS research, and cybersecurity-conscious projects.</p>
         <a class="btn" href="mailto:hello@matthewdaluz.me">hello@matthewdaluz.me</a>
       </div>
     </section>
   </main>
 
   <footer>
-    © <span id="year"></span> Matthew Daluz — Crafted with HTML &amp; CSS.
+    © <span id="year"></span> Matthew DaLuz — Built with HTML &amp; CSS • RedHead Industries.
   </footer>
 
   <script>
